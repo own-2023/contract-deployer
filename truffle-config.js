@@ -15,6 +15,6 @@ module.exports = {
   },
   db: {
     enabled: false,
-    host: "127.0.0.1",
+    host: "localhost",
   }
 };

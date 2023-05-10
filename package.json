@@ -1,22 +1,25 @@
 {
-  "name": "solidity-exercise",
+  "name": "pet-shop",
   "version": "1.0.0",
   "description": "",
-  "main": "truffle-config.js",
+  "main": "truffle.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.8.1",
-    "chai": "^4.3.7",
-    "truffle-flattener": "^1.6.0"
-  },
+  "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3",
+    "uws": "^200.0.0"
   }
 }

@@ -1,4 +1,4 @@
-const HelloBlockchain = artifacts.require('HelloBlockchain');
+const HelloBlockchain = artifacts.require('ImageNft');
 
 module.exports = async (callback) => {
   try {
