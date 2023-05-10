@@ -9,7 +9,7 @@ Bu, ERC-721 standardına dayalı bir non-fungible token (NFT) için bir akıllı
 
 # Ön Gereksinimler
 
-    Node.js 14 veya daha yüksek sürümü
+    Node.js 18 veya daha yüksek sürümü, truffle
     Windows, Linux, ya da macOS
 
 # Başlangıç
