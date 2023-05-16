@@ -17,11 +17,12 @@ contract ImageNFT is ERC721 {
         string imageUrl;
         uint256 price;
         address owner;
+        string name;
     }
 
     mapping(uint256 => ImageMetadata) private _imageMetadatas;
 
-    function mint(string memory imageUrl, uint256 price) public returns (uint256) {
+    function mint(string memory imageUrl, string memory name ,uint256 price) public returns (uint256) {
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
@@ -30,7 +31,8 @@ contract ImageNFT is ERC721 {
         _imageMetadatas[newItemId] = ImageMetadata({
             imageUrl: imageUrl,
             price: price,
-            owner: msg.sender
+            owner: msg.sender,
+            name: name
         });
 
         return newItemId;
@@ -72,4 +74,25 @@ contract ImageNFT is ERC721 {
         require(msg.sender == _imageMetadatas[tokenId].owner, "ImageNFT: caller is not the owner");
         _imageMetadatas[tokenId].price = 0;
     }
+
+       function totalSupply() public view returns (uint256) {
+        return _tokenIds.current();
+    }
+
+       function getOwnedTokens(address owner) public view returns (uint256[] memory) {
+        uint256[] memory tokenIds = new uint256[](balanceOf(owner));
+        uint256 tokenIndex = 0;
+
+        for (uint256 i = 0; i < totalSupply(); i++) {
+            if (ownerOf(i) == owner) {
+                tokenIds[tokenIndex] = i;
+                tokenIndex++;
+            }
+        }
+
+        return tokenIds;
+    }
+
+
+
 }
