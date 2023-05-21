@@ -43,6 +43,18 @@ contract ImageNFT is ERC721 {
         return _imageMetadatas[tokenId].imageUrl;
     }
 
+    function getAllImageMetadatas() public view returns (ImageMetadata[] memory) {
+    ImageMetadata[] memory metadatas = new ImageMetadata[](totalSupply());
+    uint256 tokenIndex = 0;
+
+    for (uint256 i = 0; i < totalSupply(); i++) {
+        metadatas[tokenIndex] = _imageMetadatas[i];
+        tokenIndex++;
+    }
+
+    return metadatas;
+}
+
     function getPrice(uint256 tokenId) public view returns (uint256) {
         require(_exists(tokenId), "ImageNFT: token does not exist");
         return _imageMetadatas[tokenId].price;
