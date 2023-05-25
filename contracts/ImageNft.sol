@@ -18,6 +18,7 @@ contract ImageNFT is ERC721 {
         uint256 price;
         address owner;
         string name;
+        uint256 id;
     }
 
     mapping(uint256 => ImageMetadata) private _imageMetadatas;
@@ -32,7 +33,8 @@ contract ImageNFT is ERC721 {
             imageUrl: imageUrl,
             price: price,
             owner: msg.sender,
-            name: name
+            name: name,
+            id: newItemId
         });
 
         return newItemId;
