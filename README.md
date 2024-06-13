@@ -1,56 +1,42 @@
 
-# Merhaba
 
-Bu repo akıllı sözleşmeleri deploy etmek, derleme, test işlemleri için oluşturulmuş bir truffle projesidir.
+This repository is created for deploying, compiling, and testing smart contracts using Truffle project.
 
-# ImageNFT Akıllı Sözleşmesi
+# ImageNFT Smart Contract
 
-Bu, ERC-721 standardına dayalı bir non-fungible token (NFT) için bir akıllı sözleşmedir. Kullanıcıların resim URL'leri ile NFT'ler oluşturmasına ve bunları ETH kullanarak satın almasına / satmasına izin verir.
+This is a smart contract for a non-fungible token (NFT) based on the ERC-721 standard. It allows users to create NFTs with image URLs and to buy/sell them using ETH
 
-# Ön Gereksinimler
+# Requirements
 
-    Node.js 18 veya daha yüksek sürümü, truffle
-    Windows, Linux, ya da macOS
+    Node.js version 18 or higher, Truffle
+    Windows, Linux, or macOS
 
-# Başlangıç
+# Usage
 
-Bu proje klonlanarak yerel makineye indirilebilir. Aşağıdaki komutları kullanarak projeyi klonlayabilirsiniz.
-
-```bash
-git clone https://github.com/bitirmeProjesi2023/contract-deployer.git
-```
-
-Bu komut, projenin bağımlılıklarını yükler.
+This command installs the project dependencies.
 
 ```bash
 npm install truffle -g
 npm install
 ```
 
-Akıllı sözleşmeyi derleyin:
+Compile the smart contract
 
 ```bash
 truffle compile
 ```
 
-Akıllı sözleşmeyi deploy edin, dağıtın.
+Deploy the smart contract.
 
 ```bash
 truffle migrate
 ```
 
-Not: Bu, akıllı sözleşmeyi yerel geliştirme ağına (örneğin, Ganache) dağıtacaktır. Farklı bir ağa dağıtmak isterseniz, truffle-config.js dosyasını buna göre düzenleyin.
+
+⚠️ This will deploy the smart contract to a local development network (e.g., Ganache). If you want to deploy to a different network, modify the truffle-config.js file accordingly.
 
 İsteğe bağlı,akıllı sözleşmeyi test edin:
 
 ```bash
 truffle migrate
 ```
-
-# Katkıda Bulunma
-
-Bu proje, katkıda bulunmak isteyen geliştiriciler için açıktır. Lütfen değişiklikleriniz için bir pull request oluşturun ve açıklayıcı bir açıklama ekleyin.
-
-# Lisans
-
-Bu proje, MIT lisansı altında lisanslanmıştır.
