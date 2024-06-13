@@ -34,9 +34,3 @@ truffle migrate
 
 
 ⚠️ This will deploy the smart contract to a local development network (e.g., Ganache). If you want to deploy to a different network, modify the truffle-config.js file accordingly.
-
-İsteğe bağlı,akıllı sözleşmeyi test edin:
-
-```bash
-truffle migrate
-```
